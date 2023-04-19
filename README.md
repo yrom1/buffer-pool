@@ -219,4 +219,6 @@ For 0x12, the 0x prefix indicates that the number is in hexadecimal notation. Th
 
 - 1 in hexadecimal is 0001 in binary (4 bits)
 - 2 in hexadecimal is 0010 in binary (4 bits)
+
+
 Combining these two 4-bit binary values gives us the 8-bit binary representation of 0x12: 00010010. Since a byte is an 8-bit value, 0x12 is considered a byte.
