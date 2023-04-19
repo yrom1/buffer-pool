@@ -49,45 +49,57 @@ for key, value in od.items():
 Here's a cool explanation of struct in Python:
 
 Import the module:
-python
-Copy code
+
+```py
 import struct
+```
 Format Strings:
+
 Format strings are used to define the data layout in bytes. Some common format codes are:
-'b': signed char (1 byte)
-'B': unsigned char (1 byte)
-'h': short (2 bytes)
-'H': unsigned short (2 bytes)
-'i': int (4 bytes)
-'I': unsigned int (4 bytes)
-'f': float (4 bytes)
-'d': double (8 bytes)
+- 'b': signed char (1 byte)
+- 'B': unsigned char (1 byte)
+- 'h': short (2 bytes)
+- 'H': unsigned short (2 bytes)
+- 'i': int (4 bytes)
+- 'I': unsigned int (4 bytes)
+- 'f': float (4 bytes)
+- 'd': double (8 bytes)
+
 You can specify the endianness (byte order) with the following characters:
 
-'<': little-endian
-'>': big-endian
-'=': native byte order
-'!': network byte order (big-endian)
+- '<': little-endian
+- '>': big-endian
+- '=': native byte order
+- '!': network byte order (big-endian)
+
+
 Packing Data:
+
+
 Use struct.pack() to convert Python data types into a binary string.
+
 Example:
 
-python
-Copy code
+```py
 data = (1, 2, 3.14)
 binary_data = struct.pack('<Ihf', *data)
-Here, the format string '<Ihf' indicates little-endian, unsigned int, short, and float. The *data is used to unpack the tuple, so the function takes the values in the tuple as individual arguments.
+```
+
+Here, the format string `'<Ihf'` indicates little-endian, unsigned int, short, and float. The *data is used to unpack the tuple, so the function takes the values in the tuple as individual arguments.
 
 Unpacking Data:
 Use struct.unpack() to convert a binary string back to Python data types.
+
 Example:
 
-python
-Copy code
+```py
 binary_data = b'\x01\x00\x00\x00\x02\x00\xc3\xf5H@'
 data = struct.unpack('<Ihf', binary_data)
 print(data)  # Output: (1, 2, 3.140000104904175)
+```
+
 Calculating Struct Size:
+
 struct.calcsize() gives you the size of the binary string based on the format string.
 
 
