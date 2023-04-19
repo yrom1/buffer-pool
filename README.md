@@ -210,3 +210,13 @@ print(packed_data)  # Output: b'\x78\x56\x34\x12'
 unpacked_data = struct.unpack('>I', b'\x12\x34\x56\x78')
 print(unpacked_data[0])  # Output: 305419896 (0x12345678 in decimal)
 ```
+
+---
+
+0x12 is a byte because it represents an 8-bit value in hexadecimal notation. A byte consists of 8 bits, and each hexadecimal digit corresponds to 4 bits. In hexadecimal notation, the digits range from 0 to 15, represented by the characters 0-9 and A-F.
+
+For 0x12, the 0x prefix indicates that the number is in hexadecimal notation. The two hexadecimal digits, 1 and 2, each represent 4 bits:
+
+- 1 in hexadecimal is 0001 in binary (4 bits)
+- 2 in hexadecimal is 0010 in binary (4 bits)
+Combining these two 4-bit binary values gives us the 8-bit binary representation of 0x12: 00010010. Since a byte is an 8-bit value, 0x12 is considered a byte.
